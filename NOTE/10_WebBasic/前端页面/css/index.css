@@ -1,0 +1,317 @@
+@charset "utf-8";
+/* 1. 页面顶部 */
+#top{
+	margin-top:50px;
+	height:50px;
+}
+/* 实现左中右三列布局 */
+#top-left,#top-search{
+	float:left
+}
+#top-right{
+	float:right
+}
+/* 左列 */
+#top-left img{
+	width:168px;
+	border-radius:5px;
+}
+/* 中间 */
+#top-search{
+	position:relative;
+	margin-left:113px;
+}
+#top-search img{
+	position:absolute;
+	right:0;
+	top:0;
+}
+#top-search input{
+	width:380px;
+	height:36px;
+	border:1px solid #999;
+	padding:5px 10px;
+	border-radius:24px;
+	background:#f5f5f5;
+}
+/* 右列 */
+#top-right{
+	margin-top:15px;
+}
+#top-right li{
+	float:left;
+	margin-right:10px;
+	height:20px;
+	line-height:20px;
+}
+#top-right img{
+	vertical-align:bottom;
+}
+/* 2.首页导航 */
+#nav{
+	margin:10px 0;
+}
+#nav a{
+	font-size:18px;
+	margin-right:50px;
+}
+/* 3.轮播图 */
+#banner{
+	height:400px;
+	position:relative;
+}
+#banner img{
+	width:1000px;
+	height:400px;
+	display:none;
+}
+#banner img:first-child{
+	display:block;
+}
+#banner ul{
+	background:red;
+	position:absolute;
+	bottom:10px;
+	left:50%;
+	margin-left:-45px;
+}
+#banner li{
+	float:left;
+	width:10px;
+	height:10px;
+	background:green;
+	margin-right:10px;
+	border-radius:50%;
+}
+#banner li:first-child{
+	background:blue;
+}
+#banner li:last-child{
+	margin:0;
+}
+#banner a{
+	position:absolute;
+	top:50%;
+	margin-top:-35px;
+	width:35px;
+	height:70px;
+	border-radius:5px;
+}
+#banner a.left{
+	background:rgba(0,0,0,.1) url("../images/index/arrow-left.png") no-repeat center;
+	left:5px;
+}
+#banner a.right{
+	background:rgba(0,0,0,.1) url("../images/index/arrow-right.png") no-repeat center;
+	right:5px;
+}
+/* 4.推荐 */
+#ads{
+	height:240px;
+	margin:10px 0;
+}
+#ads div{
+	width:326px;
+	height:240px;
+	float:left;
+	margin-right:11px;
+}
+#ads .ad1{
+	background:url(../images/index/sbanner1.jpg);
+}
+.ad1 img{
+	float:right;
+	width:130px;
+	margin-top:50px;
+	margin-right:40px;
+}
+#ads .ad2{
+	background:url(../images/index/sbanner2.jpg);
+}
+.ad2 img{
+	width:230px;
+	margin-top:35px;
+	margin-left:45px;
+}
+#ads .ad3{
+	background:url(../images/index/sbanner3.jpg);
+	margin:0;
+}
+.ad3 img{
+	width:160px;
+	margin-top:35px;
+	margin-left:45px;
+}
+#ads img{
+	transition:1s;
+}
+#ads img:hover{
+	transform:scale(1.1);
+}
+/* 5.横幅 */
+#wrapper{
+	height:370px;
+	background:url("../images/index/index_guild.jpg");
+	/*调整背景图片的尺寸*/
+	background-size:100%;
+}
+#main{
+	margin:10px 0;
+}
+#main .item-type{
+	overflow:hidden;
+}
+#main .title{
+	font-size:24px;
+	font-weight:bold;
+	color:#333;
+	margin-bottom:10px;
+	margin-top:15px;
+}
+#main .title>a{
+	display:inline-block;
+	width:56px;
+	height:25px;
+	background:#333;
+	color:#fff;
+	margin-left:25px;
+	font-size:14px;
+	text-align:center;
+	line-height:25px;
+	vertical-align:bottom;
+}
+.item-type div div{
+	float:left;
+	background:#e8e8e8;
+	width:375px;
+	height:185px;
+}
+.item-type .item1{
+	width:615px;
+	height:380px;
+	margin-right:10px;
+}
+.item-type .item2{
+	margin-bottom:10px;
+}
+
+.item-type img{
+	float:right;
+	width:130px;
+}
+/* 商品名称，价格，详情->共有样式 */
+.goodsName{
+	margin-top:50px;
+	margin-left:50px;
+}
+.price{
+	margin-top:10px;
+	margin-left:50px;
+	color:#6e5557;
+	font-weight:700;
+}
+.detail{
+	margin-top:30px;
+	margin-left:50px;
+	width:132px;
+	height:24px;
+	background:#6e5557;
+	color:#fff;
+	text-align:center;
+	line-height:24px;
+}
+/* 分别调整三个模块 */
+.item1 img{
+	width:230px;
+	margin-top:60px;
+	margin-right:50px;
+}
+.item1 h2{
+	margin-top:100px;
+	margin-left:60px;
+	color:#333;
+	font:36px "微软雅黑";
+}
+.item1 .goodsName{
+	margin-top:10px;
+	margin-left:70px;
+}
+.item1 .price{
+	margin-left:100px;
+}
+.item1 .detail{
+	margin-left:100px;
+	margin-top:10px;
+}
+.item2 img{
+	width:160px;
+	margin-top:20px;
+	margin-right:20px;
+}
+.item3 img{
+	width:100px;
+	margin-top:25px;
+	margin-right:30px;
+}
+/* 7.首页底部 */
+#footer{
+	overflow:hidden;
+	margin:50px 0;
+}
+#footer div{
+	float:left;
+	margin:0 95px;
+	text-align:center;
+}
+/* 8.bottom */
+#bottom{
+
+}
+#bottom div{
+	float:right;
+}
+#bottom>.logo{
+	width:168px;
+	border-radius:5px;
+}
+#bottom>.fontImg{
+	width:650px;
+}
+#bottom .erweima{
+	width:100px;
+	float:right;
+	margin-right:10px;
+}
+#bottom .android{
+	width:125px;
+	margin:8px -10px 5px 0;
+}
+#bottom div p{
+	width:125px;	
+}
+#bottom p{
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

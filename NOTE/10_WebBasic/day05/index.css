@@ -1,0 +1,79 @@
+/*清除默认样式*/
+body,ul,ol{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+body{
+	font-size:14px;
+	color:#999;
+}
+a{
+	text-decoration:none;
+	color:#999;
+}
+/*容器样式*/
+#nav,#banner{
+	width:990px;
+	margin:0 auto;
+}
+/* 导航栏 */
+#nav{
+	height:50px;
+	background:rgba(0,0,0,.3);
+}
+#nav>ul>li{
+	float:left;
+	width:240px;
+	margin-right:10px;
+	text-align:center;
+	line-height:50px;
+
+}
+#nav .no-margin{
+	margin:0;
+}
+#nav .address{
+	position:relative;
+}
+#nav ol{
+	display:none;
+	background:orange;
+	position:absolute;
+	width:240px;
+	z-index:10;
+}
+#nav ol li:hover{
+	background:green;
+}
+#nav .address:hover ol{
+	display:block;
+}
+/*banner*/
+#banner{
+	margin-top:30px;
+	height:300px;
+	position:relative;
+}
+#banner img{
+	width:990px;
+	height:300px;
+}
+#banner ul{
+	position:absolute;
+	bottom:20px;
+	left:450px;
+}
+#banner li{
+	float:left;
+	width:20px;
+	height:20px;
+	margin-right:10px;
+	background:red;
+	text-align:center;
+	line-height:20px;
+	border-radius:50%;
+}
+
+
+

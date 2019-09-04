@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="/static/js/jquery-1.11.3.js"></script>
+<script>
+    /*var jsonStr = '{"name":"吕泽","age":30}';
+    var obj = JSON.parse(jsonStr);
+    console.log("姓名:"+obj.name);
+    console.log("年龄:"+obj.age);*/
+
+
+    /**
+     * 练习:使用JSON格式的字符串来表示一个数组
+     * 数组中封装两个人的信息(name,age)
+     * 再将JSON格式的字符串转换为JS对象
+     * 继续循环遍历JS对象得到每个人的信息并输出在控制台上
+     * */
+
+    var jsonStr = '[{"name":"lvze","age":30},{"name":"laowei","age":40}]';
+    var arr = JSON.parse(jsonStr);
+    console.log(arr)
+    $.each(arr,function(i,obj){
+        console.log("姓名:"+obj.name);
+        console.log("年龄:"+obj.age);
+    });
+</script>
+</body>
+</html>

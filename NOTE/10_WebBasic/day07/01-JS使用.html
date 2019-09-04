@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript">
+	//alert("head中的弹框");
+	document.write("动态添加");
+  </script>
+  <!--
+  <script src="index.js" type="text/javascript">
+	alert("外链中写内嵌");
+  </script>
+  -->
+ </head>
+ <body>
+	<h1 onclick="document.write('haha');">
+		标题文本
+	</h1>
+	<script>	
+		document.write("<h2>动态3</h2>");
+	</script>
+	<script>
+		console.log("控制台输出")
+		document.write("动态2")
+	</script>
+	<button onclick="alert('按钮被点击');console.log('第一个JS程序');">点击</button>
+ </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	#nav{
+		width:500px;
+		height:50px;
+		background:orange;
+		/*解决水平方向上换行导致的缝隙*/
+		font-size:0;
+	}
+	a{
+		text-decoration:none;
+		color:white;
+		/*子元素继承父元素的文本属性，为0；需要单独调整显示*/
+		font-size:20px;
+		display:inline-block;
+		width:100px;
+		height:50px;
+		/*文本在元素的尺寸范围内水平居中*/
+		text-align:center;
+		/*一行文本在当前行中永远垂直居中,行高与高度保持一致，实现垂直居中*/
+		line-height:50px;
+	}
+	a:hover{
+		background:red;
+	}
+  </style>
+ </head>
+ <body>
+	<div id="nav">
+		<a href="">首页1</a><a href="">首页2</a>
+		<a href="">首页3</a>
+		<a href="">首页4</a>
+		<a href="">首页5</a>
+	</div>
+ </body>
+</html>

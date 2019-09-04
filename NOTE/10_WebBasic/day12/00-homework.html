@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	ul,ol{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.address{
+		position:relative;
+	}
+	.address ol{
+		display:none;
+		position:absolute;
+		z-index:1;
+	}
+	.address:hover ol{
+		display:block;
+	}
+	.address ol li:hover{
+		color:red;
+	}
+	#banner{
+		width:990px;
+		margin:0 auto;
+		height:396px;
+		position:relative;
+	}
+	#banner img{
+		width:990px;
+		display:none;
+	}
+	#banner img:first-child{
+		display:block;
+	}
+	#banner ul{
+		position:absolute;
+		bottom:20px;
+		left:50%;
+		margin-left:-45px;
+	}
+	#banner li{
+		float:left;
+		width:20px;
+		height:20px;
+		background:gray;
+		margin-right:10px;
+	}
+	#banner li:first-child{
+		background:red;
+	}
+  </style>
+  <script>
+	window.onload = function (){
+		//1. 下拉菜单点击传值
+		var ol = document.getElementsByTagName("ol")[0];
+		var lis = ol.children;//子节点数组
+		var span = document.getElementsByTagName("span")[0];
+		//循环添加事件
+		for(i in lis){
+			lis[i].onclick = function(){
+				span.innerHTML = this.innerHTML;
+			};
+		}
+
+		//2. 轮播图
+		//获取父元素节点
+		var banner = document.getElementById("banner");
+		//获取图片数组
+		var imgs = document.getElementsByTagName("img");
+		//获取索引数组
+		var indexs = document.getElementsByClassName("index")[0].children;
+		var imgIndex = 0;//图片下标
+		var timer = setInterval(autoPlay,1000)
+		function autoPlay(){
+			//隐藏当前图片
+			imgs[imgIndex].style.display = "none"; 
+			//修改索引颜色
+			indexs[imgIndex].style.backgroundColor = "gray";
+			//显示下一张图片
+			imgIndex ++;
+			if(imgIndex == imgs.length){
+				imgIndex = 0;
+			}
+			imgs[imgIndex].style.display = "block";
+			//显示对应索引
+			indexs[imgIndex].style.backgroundColor = "red";
+		}
+		//鼠标移入，停止定时器
+		banner.onmouseover = function (){
+			clearInterval(timer);
+		};
+		//鼠标移出，重启定时器
+		banner.onmouseout = function (){
+			timer = setInterval(autoPlay,1000);
+		};
+	};
+  
+  </script>
+ </head>
+ <body>
+	<div id="nav">
+		<ul>
+			<li class="address">
+				<span>北京</span>
+				<ol>
+					<li>北京</li>
+					<li>上海</li>
+					<li>广州</li>
+					<li>深圳</li>
+				</ol>
+			</li>
+		</ul>
+	</div>
+	<div id="banner">
+		<img src="index_banner1.jpg">
+		<img src="index_banner2.jpg">
+		<img src="index_banner3.jpg">
+		<ul class="index">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+ </body>
+</html>

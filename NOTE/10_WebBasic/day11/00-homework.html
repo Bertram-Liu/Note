@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="index.js"></script>
+  <script>
+	function show(){
+		//外部封装函数
+		var input = $("input").value;//获取输入内容
+		var span = $("span");
+		//判断
+		if(input.length >= 6 && input.length <= 18){
+			span.innerHTML = "用户名合法";
+			span.style.color = "#0f0";
+		}else{
+			span.innerHTML = "用户名不合法";
+			span.style.color = "red";
+		}
+		// \s
+		var reg = /\s+/g;
+		var s = "h e l l o";
+		s.replace(reg,"");
+
+
+	}
+  
+  </script>
+ </head>
+ <body>
+	<input type="text" name="" maxlength="18">
+	<span></span>
+	<button onclick="show()">验证</button>
+ </body>
+</html>

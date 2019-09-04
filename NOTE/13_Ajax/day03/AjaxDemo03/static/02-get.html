@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="/static/js/jquery-1.11.3.js"></script>
+  <script>
+    $(function(){
+      $("#btnQuery").click(function(){
+        var uname = $("#uname").val();
+        $.get("/02-server","uname="+uname,function(data){
+          var html = "";
+          $.each(data,function(i,obj){
+            html+="<tr>";
+             html+="<td>"+obj.uname+"</td>";
+             html+="<td>"+obj.upwd+"</td>";
+             html+="<td>"+obj.nickname+"</td>";
+             html+="<td>"+obj.email+"</td>";
+            html+="</tr>";
+          });
+          $("#content").html(html);
+        },"json");
+      });
+
+
+      $("#btnAjax").click(function(){
+        $.ajax({
+          url:'/02-server',
+          type:"get",
+          data:"uname="+$("#uname").val(),
+          async:true,
+          dataType:'json',
+          success:function(data){
+            var html = "";
+            $.each(data,function(i,obj){
+              html+="<tr>";
+               html+="<td>"+obj.uname+"</td>";
+               html+="<td>"+obj.upwd+"</td>";
+               html+="<td>"+obj.nickname+"</td>";
+               html+="<td>"+obj.email+"</td>";
+              html+="</tr>";
+            });
+            $("#content").html(html);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>
+    <input type="text" id="uname">
+    <button id="btnQuery">查询($.get)</button>
+    <button id="btnAjax">查询($.ajaxx)</button>
+
+  </p>
+  <table border="1" width="400">
+    <tr>
+      <th>用户名</th>
+      <th>密码</th>
+      <th>昵称</th>
+      <th>邮箱</th>
+    </tr>
+    <tbody id="content"></tbody>
+  </table>
+</body>
+</html>

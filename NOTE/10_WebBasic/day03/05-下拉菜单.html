@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	ul,ol{
+	/*取消列表项目符号*/
+		list-style:none;
+		width:200px;
+		background:orange;
+	}
+	ol{
+		/*元素隐藏不占位*/
+		display:none;
+	}
+	ul>li:hover>ol{
+		display:block;
+	}
+	ol>li:hover{
+		background:gray;
+	}
+
+  </style>
+ </head>
+ <body>
+	<ul>
+		<li class="address">
+			我的淘宝
+			<ol>
+				<li>我的订单</li>
+				<li>我的订单</li>
+			</ol>
+		</li>
+		
+	</ul>
+ </body>
+</html>

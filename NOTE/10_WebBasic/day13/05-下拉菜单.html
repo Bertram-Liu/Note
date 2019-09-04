@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+  <style>
+	ul,ol{
+		margin:0;
+		padding:0;
+		list-style:none;
+		width:200px;
+		background:orange;
+	}
+	ol{
+		display:none;
+	}
+	.address:hover ol{
+		display:block;
+	}
+	ol li:hover{
+		background:gray;
+	}
+  </style>
+  <script>
+	$(function (){
+		$(".address li").click(function (){
+			$(".address span").html($(this).html());
+		});
+	});
+
+  </script>
+ </head>
+ <body>
+	<ul>
+		<li class="address">
+			<span>北京</span>
+			<ol>
+				<li>北京</li>
+				<li>上海</li>
+				<li>广州</li>
+				<li>深圳</li>
+			</ol>
+		</li>
+	</ul>
+ </body>
+</html>

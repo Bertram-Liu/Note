@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+ <body>
+	<h1>一级标题</h1>
+	<h1 id="d1" aa="bb">一级标题</h1>
+	<h1 id="ad">一级标题</h1>
+	<h1 id="ad1">一级标题</h1>
+	<script>
+		console.log($("[id]"));
+		console.log($("[id='d1']"));
+		console.log($("[id^=d]"));
+		console.log($("[id$=d]"));
+		console.log($("[id*=d]"));
+		console.log($("[aa]"));
+	
+	</script>
+ </body>
+</html>

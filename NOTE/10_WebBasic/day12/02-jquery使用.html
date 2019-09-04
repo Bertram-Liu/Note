@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+  <script>
+	window.onload = function (){
+		//使用jquery获取元素
+		console.log($("h1"));
+		/*
+		$("h1").innerHTML = "hello";
+		$("h1").setAttribute("id","d1");
+		*/
+		//JQ对象转原生对象
+		console.log($("h1")[0]);//获取原生对象
+		$("h1")[0].innerHTML = "哈哈哈";
+		//get(index)
+		$("h1").get(1).innerHTML = "动态修改";
+
+		//原生对象转JQ
+		var h1 = document.getElementsByTagName("h1")[2];
+		var $h1 = $(h1);
+		console.log(h1,$h1);
+		//jq对象调用jq的方法
+		$h1.html("<a href=''>hello</a>");
+		$("h1").html("233333");//全部修改
+		//获取某一个jq对象 eq(index)
+		$("h1").eq(1).html("66666");
+	};
+  
+  </script>
+  <style>
+	h1{
+	}
+	#d1{}
+	.c1{}
+	div img{}
+  
+  </style>
+ </head>
+ <body>
+	<h1>一级标题</h1>
+	<h1>一级标题</h1>
+	<h1>一级标题</h1>
+ </body>
+</html>

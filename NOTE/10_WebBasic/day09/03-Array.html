@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//1. 数组创建
+	var arr1 = [10,20,"30"]; //字面量
+	var arr2 = new Array(1,2,3);
+	console.log(arr1,arr2);
+	var arr3 = [5];
+	//使用new关键字传入一个整数参数，表示预分配数组长度
+	var arr4 = new Array(5);
+	console.log(arr3,arr4);
+	//2. 数组会自动为每一位元素分配下标，从0开始
+	//通过下标操作数组元素 arr[index]
+	console.log(arr1[1]);
+	arr1[2] = "hello";
+	arr1[5] = "wolrd";//数组长度可以动态修改
+	console.log(arr1);
+	//3. 数组长度，属性length
+	console.log(arr1.length);
+	//4. 遍历数组
+	for(var i = 0; i < arr1.length;i++){
+		console.log(arr1[i]);
+	}
+	for(var j = arr1.length-1; j >= 0; j--){
+		console.log(j,arr1[j]);
+	}
+	//for-in遍历
+	for(a in arr1){
+		console.log(a,arr1[a]);
+	}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*
+	//自定义类 构造函数
+	function Student(name,age){
+		
+	}
+	var s1 = new Student();
+	console.log(s1);
+	*/
+
+
+  
+  
+  
+  </script>
+ </head>
+ <body>
+	
+ </body>
+</html>

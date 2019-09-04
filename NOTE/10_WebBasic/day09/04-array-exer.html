@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <Script>
+	function saveData(){
+		var arr = [];
+		while(true){
+			var input = prompt("请输入数据");
+			if(input == "exit"){
+				break;
+			}else{
+				//存储在数组中
+				arr[arr.length] = input;
+			}
+		}
+		console.log(arr);
+	}
+	//saveData();
+
+	//2. 求最大
+	function findMax(){
+		var arr = [10,5,234,6,78,99,-6];
+		var max = arr[0];
+		for(var i = 1;i < arr.length;i++){
+			if(arr[i] > max){
+				//更新最大值
+				max = arr[i];
+			}
+		}
+		console.log(max);
+	}
+	//findMax();
+
+	//3. 查询下标
+	function findIndex(){
+		var arr = [10,5,234,6,5,78,99,-6];
+		var index = -1;
+		var input = prompt("请输入");
+		for(var i = 0; i < arr.length; i++){
+			if(input == arr[i]){
+				index = i;
+			}
+		}
+		console.log(index);
+		/*
+		if(index){//true
+			console.log(index);
+		}else if(index == 0){
+			console.log(index);
+		}else{
+			index = -1;
+			console.log(index);
+		}
+		*/
+	}
+	//findIndex();
+
+	//4. 排序
+	function sortAsc(){
+		var arr = [120,65,30];
+		if(arr[0] > arr[1]){
+			arr[0] = arr[0] ^ arr[1];
+			arr[1] = arr[0] ^ arr[1];
+			arr[0] = arr[0] ^ arr[1];
+		}
+		if(arr[1] > arr[2]){
+			arr[1] = arr[1] ^ arr[2];
+			arr[2] = arr[1] ^ arr[2];
+			arr[1] = arr[1] ^ arr[2];
+		}
+		if(arr[0] > arr[1]){
+			arr[0] = arr[0] ^ arr[1];
+			arr[1] = arr[0] ^ arr[1];
+			arr[0] = arr[0] ^ arr[1];
+		}
+		console.log(arr);
+	}
+	sortAsc();
+
+
+
+	
+  
+  
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

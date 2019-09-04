@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <title>表单</title>
+  </head>
+  <body>
+     <form method="post" action="" enctype="multipart/form-data">
+     	<p>用户名:<input type="text" name="username" placeholder="请输入用户名" autocomplete="off"></p>
+     	<p>密码:<input type="password" name="password" placeholder="请输入密码"></p>
+     	<p>
+     		 性别:
+     		 男<input type="radio" name="sex" value="0">
+     		 女<input type="radio" name="sex" value="1" checked>
+     	</p>
+     	<p>
+     		爱好:
+     		看电视<input type="checkbox" name="love" value="1">
+     		足球<input type="checkbox" name="love" value="2">
+     		篮球<input type="checkbox" name="love" value="3">
+     		羽毛球<input type="checkbox" name="love" value="4">
+     	</p>
+
+     	<p>请上传头像<input type="file" name="face" accept="image/gif"></p>
+     	<p>
+     		省自治区
+     		<select name="provinces">
+     			<optgroup label="直辖市">
+	     			<option value="1">北京市</option>
+	     			<option value="2">天津市</option>
+	     			<option value="3">重庆市</option>
+	     			<option value="4">上海市</option>
+     			</optgroup>
+     			<optgroup label="华北区">
+     				<option value="5" selected>河北省</option>
+     				<option value="6">山东省</option>
+     			</optgroup>
+     			<option value="7">西藏</option>
+     		</select>
+     	</p>
+     	<p>
+     		留言:
+     		<textarea name="message" cols="30" rows="10" placeholder="我要话说"></textarea>
+     	</p>
+		<input type="hidden" name="token" value="123">
+     	<input type="submit" value="免费注册">
+     	<input type="reset" value="取消">
+     </form>     
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+  </body>
+</html>

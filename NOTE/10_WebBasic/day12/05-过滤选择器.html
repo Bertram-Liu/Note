@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+ <body>
+	<p>段落标签</p>
+	<p class="c1">段落标签</p>
+	<p class="c1">段落标签</p>
+	<p>段落标签</p>
+	<p>段落标签</p>
+	<p>段落标签</p>
+	<p>段落标签</p>
+	<p>段落标签</p>
+	<button onclick="first()">:first</button>
+	<button onclick="last()">:last</button>
+	<button onclick="even()">:even</button>
+	<button onclick="odd()">:odd</button>
+	<button onclick="index()">(index)</button>
+	<script>
+		function first(){
+			$("p:first").css("color","red");
+		}
+		function last(){
+			$("p:last").css("color","green");
+		}
+		function even(){
+			$("p:even").css("background","orange");
+		}
+		function odd(){
+			$("p:odd").css("background","pink");
+		}
+		function index(){
+			$("p:eq(3)").css("font-size","24px");
+			$("p:lt(3)").html("hahaha");
+			$("p:gt(3)").text("<b>hehehe</b>");
+		}
+		$("p:not(.c1)").html("-----------");
+
+	
+	
+	
+	</script>
+ </body>
+</html>

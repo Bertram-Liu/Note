@@ -1,0 +1,19 @@
+body,p,div,h1,h2,h3,h4,h5,h6,ul,ol,li,table,tr,td,th,thead,tbody,tfoot,form,input,select{
+	margin:0;
+	padding: 0;	
+}
+ul,ol{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+img{
+	border:0;
+}
+
+i,em{
+	font-style: normal;
+}

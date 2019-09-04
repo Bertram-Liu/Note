@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//1. 正则
+	var reg1 = /知乎/g;
+	var reg2 = /\d{6,10}/g;
+	var reg3 = new RegExp("知乎","g");
+	var reg4 = new RegExp("\\d{6}","g");
+	console.log(reg1,reg2,reg3,reg4);
+	//test(str) 检测字符串中是否存在正则对应的内容
+	var s = "hello1234567";
+	//lastIndex 下次查询的起始下标
+	console.log(reg4.lastIndex);
+	var r1 = reg4.test(s);
+	console.log(r1);
+
+	console.log(reg4.lastIndex);
+	var r2 = reg4.test(s);
+	console.log(r2);
+
+	//2.数学对象
+	console.log(Math.PI);//数学常量
+	console.log(Math.random());//0~1随机小数
+	console.log(Math.ceil(4.01));//向上取整 5
+	console.log(Math.floor(4.99));//向下取整 4
+	console.log(Math.round(4.5));//四舍五入取整
+
+	//3. 日期对象 Date
+	var date1 = new Date();//获取系统时间
+	console.log(date1);
+	var date2 = new Date("2020-05-03");
+	console.log(date2);
+	//提取时间分量
+	console.log(date1.getFullYear());//年
+	//获取月份返回0~11对应12个月，需要手动+1
+	console.log(date1.getMonth());//月
+	console.log(date1.getDate());//日
+	//获取星期，返回0~6对应周日~周六
+	console.log(date2.getDay());//星期
+	//时分秒
+	console.log(date1.getHours());
+	console.log(date1.getMinutes());
+	console.log(date1.getSeconds());
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	div{
+		width:200px;
+		height:200px;
+		background:red;
+	}
+
+  </style>
+  <script>
+	window.onload = function (){
+		var btn = document.getElementsByTagName("div")[0];
+		btn.onclick = function (e){//event evt e
+			console.log(e.offsetX,e.offsetY);
+			console.log(e.clientX,e.clientY);
+			console.log(e.screenX,e.screenY);
+		};
+		//键盘事件对象
+		onkeydown = function (e){
+			console.log("keydown",e.key,e.which);
+		};
+		onkeypress = function(e){
+			console.log("keypress",e.key,e.which);
+		}
+	};
+  
+  </script>
+ </head>
+ <body>
+	<div>点击</div>
+ </body>
+</html>

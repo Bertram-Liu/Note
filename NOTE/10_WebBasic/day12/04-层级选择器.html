@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+ <body>
+	<div>
+		<h1>参考文本</h1>
+		<p>div->p</p>
+		<span>div->span</span>
+		<h1>
+			<span>div->h1->span</span>
+		</h1>
+		<p>div->p</p>
+	</div>
+	<script>
+		$("span+h1").css("color","red");
+		$("span+p").css("color","green");
+		console.log($("span+p"));
+		$("span~p").css("color","blue");
+	
+	
+	</script>
+ </body>
+</html>

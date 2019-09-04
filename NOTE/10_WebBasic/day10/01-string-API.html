@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//1. 分割字符串
+	var str = "2020-05-01";
+	var r1 = str.split("-");
+	console.log(r1,str);
+	var r2 = str.split();
+	console.log(r2);
+	var r3 = str.split("/");
+	console.log(r3);
+
+	var str2 = "101_5&201_6&301_8";
+	//商品id 101 ，商品数量5
+	var r4 = str2.split("&");//["101_5",]
+	for(i in r4){
+		var s = r4[i];//"101_5"
+		var arr = s.split("_");//["101","5"]
+		console.log(arr[0],arr[1]);
+	}
+
+	//2. 模式匹配
+	var s = "上知乎，搜知乎，问知乎，答知乎";
+	var res1 = s.match("知乎");
+	console.log(res1);
+	var reg1 = /知乎/;
+	var reg2 = /知乎/g;
+	var res2 = s.match(reg1);
+	var res3 = s.match(reg2);
+	console.log(res2,res3);
+	//查找并替换
+	var res4 = s.replace(reg2,"达内");
+	console.log(res4,s);
+
+
+
+
+  
+  
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

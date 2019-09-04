@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            /**
+             * 为 #btnTest 绑定 click 事件
+             * */
+            $("#btnTest").click(function(){
+                var xhr = createXhr();
+                console.log(xhr);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btnTest">测试xhr</button>
+</body>
+</html>

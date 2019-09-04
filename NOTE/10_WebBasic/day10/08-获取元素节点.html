@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  
+ </head>
+ <body>
+	<input type="radio" name="gender" value="boy">
+	<input type="radio" name="gender" value="girl">
+
+	<h1 class="c1">一级标题</h1>
+	<h1 id="d1">一级标题</h1>
+	<h1 class="c1">一级标题</h1>
+	<h1>一级标题</h1>
+	<h1 class="c1">一级标题</h1>
+	<p class="c1">段落</p>
+	<script>
+		var elems = document.getElementsByTagName("h1");
+		console.log(elems);
+		var h1 = document.getElementById("d1");
+		console.log(h1);
+		//元素节点的属性，操作标签内容
+		h1.innerHTML = "<a href='#'>超链接</a>";
+		var elems2 = document.getElementsByClassName("c1");
+		console.log(elems2);
+		var p = elems2[3];//元素节点
+		p.innerText = "<a href='#'>超链接</a>";
+		var elems3 = document.getElementsByName("gender");
+		console.log(elems3,elems3[0].value);
+
+
+  
+    </script>
+ </body>
+</html>

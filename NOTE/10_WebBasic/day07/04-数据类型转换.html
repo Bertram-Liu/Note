@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	var r1 = "小泽" + "Maria";
+	var r2 = "100" + 10; //10010
+	var r3 = 10 + 5 + "20";//
+	console.log(r1,r2,r3);
+	var r4 = 5 + "20" + 10;//"52010"
+	var r5 = "hello" + true;
+	var r6 = "hello" + undefined;
+	var r7 = "hello" + null;
+	console.log(r5,r6,r7);
+
+	var s1 = 100 - 10;
+	var s2 = "100" - 10;//
+	console.log(s2,typeof s2);
+	var s3 = "小泽" - 100;
+	console.log(s3,typeof s3);
+
+	var s4 = "100" - true;
+	var s5 = "100" + true;//"100true"
+	var s6 = true + false;//1
+	var s7 = true + null;//1
+	var s8 = true + undefined;//NaN
+	console.log(s4,s5,s6,s7,s8);
+
+	//强制类型转换
+	console.log(Number("100"));
+	console.log(Number("100a"));
+	console.log(Number(true));
+	console.log(Number("false"));
+	console.log(Number(undefined));
+	console.log(Number(null));
+
+	console.log(parseInt(35.5));
+	console.log(parseInt("35.5"));
+	console.log(parseInt("35.5a"));
+	console.log(parseInt("a35.5"));
+	console.log(parseInt("3a5"));
+	console.log(parseInt(true));
+	console.log(parseInt(null));
+
+	console.log(parseFloat(35.5));
+	console.log(parseFloat("35.5a"));
+	console.log(parseFloat("35.5.5"));
+
+	//转换字符串
+	var a = true;
+	var b = 100;
+	console.log(a,a.toString());
+	console.log(b,b.toString());
+
+	//转换布尔类型
+	console.log(Boolean(1));
+	console.log(Boolean("1"));
+	console.log(Boolean(" "));
+	
+	console.log(Boolean(0));
+	console.log(Boolean(0.0));
+	console.log(Boolean(""));
+	console.log(Boolean(undefined));
+	console.log(Boolean(null));
+	console.log(Boolean(NaN));
+
+
+
+  
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

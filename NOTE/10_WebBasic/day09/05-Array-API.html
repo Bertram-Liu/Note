@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//1. 操作数组末尾元素
+	var arr = [1,2,3];
+	var r1 = arr.push(10,20,30);
+	console.log(r1,arr);
+	var r2 = arr.pop();
+	console.log(r2,arr);
+	//2. 操作头部元素
+	var r3 = arr.unshift("10");
+	r3 = arr.unshift("20");
+	console.log(r3,arr);
+	var r4 = arr.shift();
+	console.log(r4,arr);
+
+	//3. 转换字符串
+	var r5 = arr.toString();
+	console.log(r5,arr);
+	var arr2 = [2020,1,10];
+	var r6 = arr2.join();
+	var r7 = arr2.join("-");
+	var r8 = arr2.join("");
+	console.log(r6,r7,r8,arr2);
+
+	//4. 反转
+	var r9 = arr2.reverse();
+	console.log(r9,arr2);
+	//5. sort()
+	var res1 = arr2.sort();
+	console.log(res1,arr2);
+	var arr3 = [2,15,8];
+	console.log(arr3.sort());//[15,2,8]
+	//自定义number的升序排列
+	function sortASC(a,b){ //会自动传入数组中两个相邻的元素
+		return a-b;//根据返回值的正负决定是否调整元素位置
+		//如果a-b>0,自动交换两个元素的位置
+	}
+	var res2 = arr3.sort(sortASC);
+	console.log(res2);
+	//自定义降序排列
+	arr3.sort(function (a,b){
+		return b-a;//返回值大于0，交换元素位置
+	});
+	console.log(arr3);
+
+	//遍历数组
+	arr3.forEach(function (elem,index){
+		console.log(elem);
+	});
+
+
+
+
+
+
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

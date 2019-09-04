@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="index.js"></script>
+  <style>
+	table{
+		width:600px;
+	}
+	table,th,td{
+		border:1px solid #000;
+	}
+  
+  </style>
+  <script>
+	function add(){
+		//取值
+		var goodName = $("input").value;
+		var goodCount = $("input",1).value;
+		var goodPrice = $("input",2).value;
+		var tbody = $("tbody");//取元素
+		//创建行和单元格
+		var tr = document.createElement("tr");
+		var tdName = document.createElement("td");
+		tdName.innerHTML = goodName;
+
+		var tdCount = document.createElement("td");
+		tdCount.innerHTML = goodCount;
+
+		var tdPrice = document.createElement("td");
+		tdPrice.innerHTML = goodPrice;
+
+		var tdOper = document.createElement("td");
+		tdOper.innerHTML = "<button>修改</button><button>删除</button>";
+
+		//追加显示
+		tr.appendChild(tdName);
+		tr.appendChild(tdCount);
+		tr.appendChild(tdPrice);
+		tr.appendChild(tdOper);
+		tbody.appendChild(tr);
+	}
+  
+  
+  </script>
+ </head>
+ <body>
+	<p>
+		<input type="text" placeholder="商品名称">
+		<input type="text" placeholder="商品数量">
+		<input type="text" placeholder="商品价格">
+		<button onclick="add()">增加</button>
+	</p>
+	<table>
+		<thead>
+			<tr>
+				<th>商品名称</th>
+				<th>商品数量</th>
+				<th>商品价格</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		
+		</tbody>
+		
+	</table>
+ </body>
+</html>

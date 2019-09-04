@@ -1,0 +1,276 @@
+day18回顾
+  类
+    类属性
+      class A:
+          v = 100
+          def fx(self):
+              pass
+          @classmethod
+          def fy(cls):
+               pass
+          @staticmethod
+          def fz():
+              pass
+    类方法
+      class A:
+          @classmethod
+          def fy(cls, ....):
+              ...
+      A.fy()
+      a = A()
+      a.fy()
+
+__slots__列表
+  限定此类创建的对象(实例)只能有固定的属性
+
+静态方法　＠staticmethod
+    class A:
+        @staticmethod
+        def fz():
+            pass
+    A.fz()
+    a = A()
+    a.fz()
+
+继承／派生
+  class B(A):
+       pass
+
+  子类添加功能，添加新方法
+  子类修改功能，覆盖
+
+单继承
+  语法:
+    class 子类名(父类名):
+        语句块
+覆盖:
+  1. 继承/派生机制
+  2. 子类实现与父类同名的方法
+  3. 子类对象调用该方法
+
+super函数:
+  super(类名, 对象).方法名()
+  super().方法名()   # 只能在方法内部调用
+
+  父类名.方法名(对象, ....)
+
+显式调用基类的 __init__ 方法
+    class A:
+        def __init__(self, x, y):
+            ...
+    class B(A):
+        def __init__(self, ....):
+            super().__init__(100, 200)
+
+issubclass(类, 类或元组)
+
+
+
+
+day19 笔记:
+封装 enclosure
+  封装是指隐藏类的实现细节,让使用者不关心这些细节
+  封装的目的是让使用者通过尽可能少的方法(或属性)操作对象
+  
+私有属性和私有方法:
+  python类中以双下划线(__) 开头,不以双下划线结尾的标识符为
+  私有成员,私有成员只能使用该类的方法进行调用和访问
+
+  示例见:
+    enclosure.py
+
+
+多态 Polymorphic
+  字面意思: '多种状态'
+
+  状态:
+    静态(编译时状态,代码写完就固定下来的状态)
+    动态(运行时状态,在运行时确定的状态)
+  说明:
+    多态是指在有继承/派生关系的类中,调用基类对象的方法,实际
+    能调用子类的覆盖方法的现象叫多态
+    python 的全部对象都只有"运行时状态(动态)" 没有C++语言里
+    的编译时状态(静态)
+  示例见:
+    poly.py
+
+
+面向对象编程语言的特征
+  继承
+    可以很多容易去创建新类,新类继承旧类的功能
+  封装
+    隐藏细节,提高软件的开发效率
+  多态
+    把所有的同类或子类对象看成同一种对象进行统一的操作
+  C++/C#/Java/Python ...
+
+
+
+
+多继承 multiple inheritance
+  多继承是指一个子类继承自两个或两个以上的基类
+  
+  语法:
+    class 类名(基类名1, 基类名2, ...):
+        ...
+  说明:
+    一个子类同时继承自多个父类,父类中的方法可以同时被继承下来
+    如果两个父类中有同名的方法,而在子类中又没有覆盖此方法时,
+      调用结果难以确定
+  示例见:
+    multiple_inherit.py
+
+
+多继承的问题:
+  标识符冲突的问题,要谨慎使用多继承
+  
+  示例见:
+    multiple_inherit2.py
+
+多继承的MRO(Method Resolution Order) 问题
+  类的__mro__属性
+    每个类都有自己的__mro__属性,此属性绑定的元组记录了此
+       类创建的对象的方法的调用次序
+
+  钻石继承
+       A
+      / \
+     B   C
+      \ /
+       D
+  示例见:
+    diamond.py
+
+
+
+对象转字符串函数
+  repr(obj)  返回一个能代表obj这个对象的字符串,此字符串
+       必须是能表示obj内容且符合python语法的字符串
+         通常:
+           eval(repr(obj)) == obj
+  str(obj)   通过给定的对象返回一个对象字符串
+  注:
+    repr(obj) 返回的字符串通常是给python3解释执行器执行的
+    str(obj) 返回的字符串通常是给人来阅读的
+
+  示例:
+    s = "I'm a Student"
+    s1 = str(s)
+    print(s1)   # I'm a Student
+    r1 = repr(s)
+    print(r1)   # "I'm a Student"
+
+
+
+
+对象转字符串函数的重写(覆盖)方法
+  repr函数的重写方法
+      def __repr__(self):
+          return 字符串
+  str函数的重写方法:
+      def __str__(self):
+          return 字符串
+ 
+  说明:
+    1. str(obj) 函数先查找obj.__str__() 方法,调用此方法
+       并返回结果
+    2. 如果obj.__str__方法不存在,则调用obj.__repr__()方法
+       并返回结果
+    3. 如果obj.__repr__方法不存在,则调用object类的__repr__
+       方法并返回<__main__.XXXX object at 0xXXXXXX> 格式
+       的字符串
+
+  示例见:
+    mynumber.py
+
+内建函数的重写
+  __abs__(self)      abs(obj) 函数调用
+  __len__(self)      len(obj) 函数调用
+  __reversed__(self) reversed(obj) 函数调用 
+  __round__(self)    round(obj)  函数调用
+
+示例见:
+  len_overwrite.py
+
+
+数值转换函数的重写
+  __complex__    complex(obj) 函数调用
+  __int__        int(obj)     函数调用
+  __float__      float(obj)   函数调用
+  __bool__       bool(obj)    函数调用
+
+  示例见:
+    mynumber3.py
+
+布尔测试函数重写
+  __bool__(self)       ---> bool(obj)
+
+  作用:
+    用于bool(obj)  函数取值
+    用于if语句真值表达式中
+    用于while语句真值表达式中
+  说明:
+    当自定义类内有__bool__(self) 方法时会优先调用此方法
+    当不存在__bool__(self) 方法时bool(obj) 调用
+       obj.__len__() 返回值是否为非零来决定真假值
+    当再不存在__len__(self) 方法时,则直接返回True
+  示例见:
+    bool.py
+
+小结:
+  只有以下几个函数可以有对应的方法进行重写
+    str(x), repr(x), int(x), bool(x), float(x)
+    complex(x), abs(x), len(x), reversed(x), round(x)
+
+对象的属性管理函数:
+   getattr(obj, name[,default])
+   hasattr(obj, name)
+   setattr(obj, name, value)
+   delattr(obj, name)
+   文档参见:
+     python_base_docs_html/内建函数(builtins).html
+
+
+迭代器(高级)
+  什么是迭代器
+    可以通过next函数取值的对象就是迭代器
+  迭代器协议:
+    迭代器协议是指对象能够使用next函数获取下一项数据,在没有
+    下一项数据时触发一个StopIteration异常来终止迭代的约定
+  迭代器协议的实现方法:
+    def __next__(self)
+
+可迭代对象
+  是指能用iter(obj) 函数返回迭代器的对象
+  可迭代对象内部需要定义 __iter__(self) 方法来返回迭代器
+  对象
+
+示例见:
+  myiterable.py
+
+
+练习:
+  1. 修改原学生信息管理系统的 Student类,
+  封装 学生类对象的 姓名,年龄, 成绩,不让除此对象的方法之外的语
+  句来访问学生类的实例属性
+
+  2. 实现一个与系统内建 的range类相同功能的类
+    class MyRange:
+        def __init__(self, start, stop=None, step=None):
+            ...
+        def __iter__(self):
+            ...
+    # 测试调用如下:
+    L = list(MyRange(5))
+    print(L)  # [0, 1, 2, 3, 4]
+    print(sum(MyRange(1, 101)))  # 5050
+    L2 = [x**2 for x in MyRange(1, 10, 3)]
+    print(L2)  # [1, 16, 49]
+    for x in MyRange(10, 0, -3):
+        print(x)  # 打印 10, 7, 4, 1
+
+    
+
+
+
+

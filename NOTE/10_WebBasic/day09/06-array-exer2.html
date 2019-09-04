@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	var num = prompt("请输入一个值");
+	var n = num;
+	var arr = [];
+	while(num != 0){
+		var r = num % 2;
+		arr.push(r);
+		num = parseInt(num / 2);//保留整数商，参与下次除2
+	}
+	arr.reverse();
+	var res = arr.join("");
+	console.log(res,n);
+
+
+  
+  
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

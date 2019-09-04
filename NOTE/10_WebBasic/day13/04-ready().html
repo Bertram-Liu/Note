@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+  <script>
+	/*
+	window.onload = function (){
+		alert("1");
+	};
+	window.onload = function (){
+		alert("2");
+	};
+	window.onload = function (){
+		alert("3");
+	};
+	*/
+	$(document).ready(function (){
+		//alert("1");
+	});
+	$().ready(function (){
+		//alert("2");
+	});
+	$(function (){
+		//alert("3");
+		
+		$("h1").on("mouseover",function (){
+			console.log("mouseover");
+		});
+		$("h1").bind("mouseout",function (){
+			console.log("out");
+		});
+		$("h1").click(function (){
+			console.log("click");
+		});
+		//内部循环遍历每个元素，添加事件
+		$("li").click(function (evt){
+			//this指代事件触发对象，原生调用原生，jq对象掉用jq方法
+			console.log(this.innerHTML,$(this).html());
+			console.log(this,$(this));
+			//事件对象的获取及属性访问同原生操作一致
+			console.log(evt,evt.offsetX);
+		});
+
+		//jq.each()
+		var arr = [1,2,3,4,5];//原生数组对象
+		$(arr).each(function (index,elem){
+			console.log(index,elem);
+		});
+		//DOM元素
+		$("li").each(function (){
+			console.log($(this).html());
+		});
+
+
+
+
+
+
+
+	});
+
+
+  </script>
+
+ </head>
+ <body>
+	<h1>一级标题</h1>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+ </body>
+</html>

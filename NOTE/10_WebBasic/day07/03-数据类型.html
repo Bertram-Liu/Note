@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//1.number
+	var a = 100;
+	var b = 053;
+	var c = 0x53;
+	console.log(a,b,c);
+	var d = 1.5;
+	var m = 1.23e5;
+	console.log(d,m);
+	//2.string
+	var s1 = "hello";
+	var s2 = "100";
+	var r = s1.charCodeAt();
+	console.log(r);
+	var s3 = "小泽老师";
+	var r2 = s3.charCodeAt(0);
+	//中文在计算机中以十六进制存储，
+	var code = r2.toString(16);
+	console.log(code);
+	//对十六进制的中文添加转义
+	var s4 = "\u5c0f";
+	console.log(s4);
+	var s5 = "\u9fa5";
+	console.log(s5);
+
+	//3. boolean
+	var s6 = true;
+	var s7 = "false";
+	var s8 = 100;
+	console.log(typeof s6,typeof (s7),typeof s8);
+	console.log(typeof undefined,typeof null);
+	
+  
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

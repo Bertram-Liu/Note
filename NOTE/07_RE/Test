@@ -1,0 +1,8 @@
+This tutorial requires you to be connected to one of the following:
+lvze@tedu.com   zhao@163.com.cn
+MongoDB Atlas Free 2019-3-4 Tier Cluster. MongoDB Atlas is a fast, easy, and free way to get started with MongoDB. Follow the Create an Atlas Free Tier Cluster tutorial to get started with MongoDB Atlas.
+Local MongoDB 2019-3-4 installation. For more information on installing MongoDB locally, see Install MongoDB.
+Insert Documents  wangwc@tedu.cn 
+iPython I am  J-bom
+1.23  -4  -1.56   2/3   45%   45.5%
+db.collection.insertMany() can insert multiple documents into a collection. Pass an array of documents to the method.

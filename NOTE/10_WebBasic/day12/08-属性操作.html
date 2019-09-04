@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+ <body>
+	<h1>hahaha</h1>
+	<input type="checkbox">
+	<button onclick="show()">点击</button>
+	<script>
+		$("h1").attr("id","d1").prop("class","c1").prop("class","c2");
+		function show(){
+			console.log($("input").prop("checked"),$("input").attr("checked"));
+			$("h1").removeAttr("id");
+		}
+		
+	
+	
+	</script>
+ </body>
+</html>

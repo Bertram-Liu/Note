@@ -1,0 +1,278 @@
+@charset "utf-8";
+/* 1. 页面顶部 */
+#top{
+	margin-top:50px;
+	height:50px;
+}
+/* 实现左中右三列布局 */
+#top-left,#top-search{
+	float:left
+}
+#top-right{
+	float:right
+}
+/* 左列 */
+#top-left img{
+	width:168px;
+	border-radius:5px;
+}
+/* 中间 */
+#top-search{
+	position:relative;
+	margin-left:113px;
+}
+#top-search img{
+	position:absolute;
+	right:0;
+	top:0;
+}
+#top-search input{
+	width:380px;
+	height:36px;
+	border:1px solid #999;
+	padding:5px 10px;
+	border-radius:24px;
+	background:#f5f5f5;
+}
+/* 右列 */
+#top-right{
+	margin-top:15px;
+}
+#top-right li{
+	float:left;
+	margin-right:10px;
+	height:20px;
+	line-height:20px;
+}
+#top-right img{
+	vertical-align:bottom;
+}
+/* 2.首页导航 */
+#nav{
+	margin:10px 0;
+}
+#nav a{
+	font-size:18px;
+	margin-right:50px;
+}
+/* 7.首页底部 */
+#footer{
+	overflow:hidden;
+	margin:50px 0;
+}
+#footer div{
+	float:left;
+	margin:0 95px;
+	text-align:center;
+}
+/* 8.bottom */
+#bottom{
+
+}
+#bottom div{
+	float:right;
+}
+#bottom>.logo{
+	width:168px;
+	border-radius:5px;
+}
+#bottom>.fontImg{
+	width:650px;
+}
+#bottom .erweima{
+	width:100px;
+	float:right;
+	margin-right:10px;
+}
+#bottom .android{
+	width:125px;
+	margin:8px -10px 5px 0;
+}
+#bottom div p{
+	width:125px;	
+}
+#bottom p{
+	text-align:center;
+}
+/* main 购物车 */
+#main{
+	overflow:hidden;
+	margin:20px 0;
+}
+/* 1.购物车小计 */
+.total{
+	color:#666;
+	font:bold 24px youyuan;
+}
+.total .rf{
+	float:right;
+}
+.total span{
+	font:normal 14px youyuan;
+	margin-left:20px;
+}
+.total b{
+	margin:0 5px;
+	color:#997679;
+}
+/* 2.顶部工具栏 */
+.toolbar{
+	height:36px;
+	border-top:1px solid #ddd;
+	background:#f5f4f5;
+	margin:20px 0 ;
+	line-height:36px;
+	text-align:center;
+	box-shadow:0px 5px 5px gray;
+}
+.toolbar div,.content div{
+	float:left;
+}
+.all{
+	width:62px;
+}
+.info{
+	width:380px;
+}
+.price{
+	width:152px;
+}
+.count{
+	width:150px;
+}
+.sum{
+	width:130px;
+}
+.action{
+	width:126px;
+}
+.all img{
+	vertical-align:middle;
+}
+/* 订单记录 */
+.content{
+	height:115px;
+	/* border:1px solid #ddd; */
+	margin:10px 0;
+	background:#fff;
+	/* border-left:0;
+	border-right:0; */
+	outline:1px solid #ddd;
+	text-align:center;
+}
+.content .all{
+	line-height:115px;
+}
+.content .info{
+	text-align:left;
+	box-sizing:border-box;
+	border-right:1px solid #ddd;
+	padding-top:15px;
+	height:115px;
+}
+.content .info img{
+	float:left;
+	width:84px;
+	height:84px;
+	margin-right:20px;
+}
+.content .info .goodsName{
+	margin-bottom:10px;
+}
+/* 单价 */
+.content .price{
+	height:115px;
+	box-sizing:border-box;
+	border-right:1px solid #ddd;
+}
+.content .price h4{
+	color:#997679;
+	margin-top:42px;
+}
+/* 数量 */
+.content .count{
+	padding-top:42px;
+	padding-left:34px;
+	box-sizing:border-box;
+}
+.content .count a{
+	float:left;
+	width:26px;
+	height:26px;
+	text-align:center;
+	line-height:26px;
+	border:1px solid #ddd;
+	background:#f5f4f5;
+}
+.content .count input{
+	float:left;
+	width:26px;
+	height:26px;
+	border:1px solid #ddd;
+	border-left:0;
+	border-right:0;
+	padding:0;
+	text-align:center;
+}
+/* 金额和操作 */
+.content .sum,.content .action{
+	line-height:115px;
+}
+/* 去结算 */
+#main{
+	position:relative;
+	padding-bottom:60px;
+}
+#main .submit-div{
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:1000px;
+	height:42px;
+	background:#f5f4f5;
+	line-height:42px;
+}
+/* 结算 */
+.submit-div div{
+	float:right;
+}
+.submit-div div p{
+	float:right;
+	width:135px;
+	height:42px;
+	text-align:center;
+	line-height:42px;
+	background:#997679;
+	color:#fff;
+	font-size:18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

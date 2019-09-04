@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  /*
+	var year = prompt("请输入年");
+	var res = year%4==0 && year%100!=0 || year%400==0;
+	console.log(year,res);
+	*/
+
+	//bmi计算
+	var height = prompt("请输入身高(m)");
+	var weight = prompt("请输入体重(kg)");
+	var bmi = weight / (height * height);
+	bmi = bmi.toFixed(2);
+	var res = bmi >= 23.9 ? "该减肥了" : bmi >= 18.5 ? "健康" : "偏瘦";
+	console.log(bmi,res,typeof bmi);
+
+
+
+  
+  
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

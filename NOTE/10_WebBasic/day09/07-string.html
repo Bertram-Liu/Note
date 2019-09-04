@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//1. 创建
+	var s1 = "小泽";
+	var s2 = new String("Maria");
+	console.log(s1,s2);
+	//操作字符：字符串采用类数组的结构存储，自动为每位字符分配下标，带有length属性，表示字符串长度
+	console.log(s2[3]);
+	for(var i = 0;i < s2.length;i++){
+		console.log(s2[i]);
+	}
+	//1. 转换字母大小写
+	var r1 = s2.toUpperCase();
+	var r2 = s2.toLowerCase();
+	console.log(r1,r2,s2);
+	//2. 获取字符或字符编码
+	console.log(s2.charAt(2),s2.charCodeAt(2));
+	//3. 获取指定字符对应的下标
+	var s3 = "hello";
+	console.log(s3.indexOf("l",2),s3.lastIndexOf("l",1));
+	//4. 截取字符串
+	console.log(s3.substring(2),s3.substring(2,4));
+
+
+
+
+
+
+  
+  
+  
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

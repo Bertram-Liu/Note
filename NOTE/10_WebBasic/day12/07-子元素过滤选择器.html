@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+
+ </head>
+ <body>
+	<ul>
+		<li>列表项</li>
+		<li>列表项</li>
+		<li>列表项</li>
+		<li>列表项</li>
+		<li>列表项</li>
+	</ul>
+	<ul>
+		<li>列表项</li>
+		<li>列表项</li>
+		<li>列表项</li>
+		<li>列表项</li>
+		<li>列表项</li>
+	</ul>
+	<input type="text">
+	<button onclick="show()">点击</button>
+	<div></div>
+	<script>
+		$("li:first").css("color","red");
+		$("li:last").css("color","green");
+		$("li:first-child").css("text-align","center");
+		$("li:last-child").css("text-align","right");
+		$("li:nth-child(3)").css("font-size","24px");
+		function show(){	
+			$("div").html("<h1>"+$("input").val()+"</h1>");
+		}
+	</script>
+ </body>
+</html>

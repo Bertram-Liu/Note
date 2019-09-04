@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="index.js"></script>
+  <script>
+	function fn(){
+		console.log("fn",this);
+	}
+	fn();//window.fn()
+
+	window.onload = function (){
+		//获取节点数组
+		var lis = document.getElementsByTagName("li");
+		for(var i = 0;i < lis.length; i++){
+			console.log(i);
+			lis[i].onclick = function (){
+				//console.log(i);//4
+				//获取当前被点击对象的值
+				//this表示函数或方法的调用者
+				console.log(this.innerHTML);
+			};
+		}
+		/*
+		var li1 = $("li");
+		var li2 = $("li",1);
+		li1.onclick = function(){
+			console.log(li1.innerHTML,this.innerHTML,this);
+		};
+		li2.onclick = function(){
+			console.log(li1.innerHTML,this.innerHTML,this);
+		};
+		*/
+
+
+	
+	};
+  
+  </script>
+ </head>
+ <body>
+	<ol>
+		<li>选项1</li>
+		<li>选项2</li>
+		<li>选项3</li>
+		<li>选项4</li>
+	</ol>
+ </body>
+</html>

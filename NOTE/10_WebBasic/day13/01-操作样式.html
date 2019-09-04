@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+  <style>
+	#d1{
+		color:red;
+	}
+	.c1{
+		background:green;
+	}
+	.c2{
+		text-decoration:underline;
+	}
+  </style>
+ </head>
+ <body>
+	<h1>元气满满</h1>
+	<p>段落</p>
+	<h2>toggleClass</h2>
+	<button onclick="toggle()">点击</button>
+	<div></div>
+	<script>
+		$("h1").attr("id","d1").prop("class","c1 c2");
+		//操作class
+		$("p").addClass("c1").addClass("c2 c3").removeClass("c2").removeClass();
+		function toggle(){
+			$("h2").toggleClass("c1 c2");
+		}
+		//行内样式
+		$("h2").css("color","red").css("text-align","center");
+		$("div").css({
+			"width":"200px",
+			"height":"200px",
+			"background":"green"
+		});
+
+
+	
+	</script>
+ </body>
+</html>

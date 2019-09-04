@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+ </head>
+ <body>
+	<div id="box">
+		<p>段落</p>
+		<div class="left">
+			<h1>标题</h1>
+		</div>
+		<p>段落</p>
+		<h1>box->h1</h1>
+	</div>
+	<script>
+		console.log($("h1").parent());
+		console.log($("h1").parents("#box"));
+
+		console.log($("#box").children());
+		console.log($("#box").children("p"));
+		console.log($("#box").find("h1"));
+
+		console.log($("h1").eq(1).prev());
+		console.log($(".left").next());
+		console.log($(".left").siblings());
+		console.log($(".left").siblings("p"));
+
+
+
+
+	
+	
+	
+	</script>
+ </body>
+</html>

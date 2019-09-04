@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="jquery-1.11.3.js"></script>
+  <script>
+	window.onload = function (){
+		$("h1").html("hahaha");
+		//匹配元素应用样式
+		$("#d1").css("color","red");
+		$(".c1").css("color","green");
+		$(".c1,p").css("font-size","20px");
+	
+	};
+  
+  </script>
+ </head>
+ <body>
+	<h1 id="d1">一级标题</h1>
+	<h1 class="c1">一级标题</h1>
+	<h1>一级标题</h1>
+	<h1 class="c1">一级标题</h1>
+	<p>段落</p>
+ </body>
+</html>

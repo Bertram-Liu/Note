@@ -1,0 +1,112 @@
+/* 清除默认样式 */
+body,h2,p{
+	margin:0;
+}
+body{
+	color:#ccc;
+}
+a{
+	color:#ccc;
+	text-decoration:none;
+}
+/* 整体样式 */
+#top,#main{
+	width:990px;
+	margin:0 auto;
+}
+/* 1. 顶部标题 */
+#top h2{
+	font-weight:400;
+	border-bottom:1px solid #999;
+	padding:20px 0;
+
+}
+/* 2. 主体 */
+#main{
+	margin-top:30px;
+	overflow:hidden;
+}
+#main .left{
+	float:left;
+	position:relative;
+}
+.left a{
+	position:absolute;
+	bottom:20px;
+	left:50%;
+	margin-left:-87px;
+	width:174px;
+	height:50px;
+	border:1px solid #64a131;
+	border-radius:5px;
+	font-size:20px;
+	text-align:center;
+	line-height:50px;
+	color:#64a131;
+}
+
+
+#main .right{
+	float:right;
+}
+#main form{
+	margin-top:70px;
+	margin-right:40px;
+}
+#main .form-line{
+	margin-bottom:30px;
+}
+.form-line>p{
+	float:left;
+	width:64px;
+	height:40px;
+	text-align:right;
+	line-height:40px;
+	margin-right:40px;
+}
+.form-line .uinfo{
+	width:300px;
+	height:40px;
+	border:1px solid #ccc;
+	box-sizing:border-box;
+	font-size:16px;
+	padding-left:10px;
+}
+.form-line .uinfo:focus{
+	outline:none;
+}
+/* 第三行 */
+.form-line>div>p{
+	float:right;
+}
+.form-line>div>input{
+	width:18px;
+	height:18px;
+	margin:0;
+	vertical-align:bottom;
+}
+.form-line>div>p>a{
+	text-decoration:underline;
+}
+/* 第四行 */
+.form-line .btn{
+	width:140px;
+	height:40px;
+	border:1px solid #64a131;
+	border-radius:5px;
+	background:#64a131;
+	color:#fff;
+	font-size:20px;
+}
+.form-line a.btn{
+	float:right;
+	background:#fff;
+	color:#64a131;
+	text-align:center;
+	line-height:40px;
+}
+
+
+
+
+

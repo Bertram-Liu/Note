@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	function start(){
+		//开启定时器
+		/*
+		timerID = setInterval(function (){
+			var date = new Date();
+			console.log(date);
+		},1000);
+		*/
+		timerID = setTimeout(function (){
+			alert("超时调用");
+		},3000);
+	}
+	function stop(){
+		//clearInterval(timerID);
+		clearTimeout(timerID);
+	}
+	//倒计时 5 4 3 2 1
+	var i = 5;
+	var timer = setInterval(function (){
+		console.log(i);
+		i--;
+		if(i == 0){
+			//关闭
+			clearInterval(timer);
+		}
+	},1000);
+	console.log("------------------");
+	//询问用户是否关闭当前窗口，如果点击确定，3秒后关闭当前窗口
+	var res = confirm("是否关闭");
+	if(res){
+		setTimeout(function (){
+			window.close();
+		},3000);
+	}
+  
+  
+  </script>
+ </head>
+ <body>
+	<button onclick="start()">开始</button>
+	<button onclick="stop()">结束</button>
+ </body>
+</html>

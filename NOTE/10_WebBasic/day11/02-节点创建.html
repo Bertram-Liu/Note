@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<p>
+		<span>span</span>
+	</p>
+	<script>
+		var h1 = document.createElement("h1");
+		var p = document.createElement("p");
+		var text = document.createTextNode("heihei");
+		p.appendChild(text);
+		//p.innerHTML = "hehe";
+		h1.innerHTML = "haha";
+		console.log(h1);
+		console.log(window);
+		document.body.appendChild(h1);
+		document.body.insertBefore(p,h1);
+
+		document.body.removeChild(h1);
+		
+	
+	
+	</script>
+ </body>
+</html>

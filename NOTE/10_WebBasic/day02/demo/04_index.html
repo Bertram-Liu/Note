@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <title>布局</title>     
+     <style type="text/css">
+       ul,ol{
+        list-style:none; /*列表样式*/
+       }
+       a{
+        
+       }
+       .wrapper{
+          width:1000px;
+          background-color: red;
+       }
+       .left{
+          width:340px;          
+          float: left;               
+          background-color: green;
+       }
+       .center{
+          width: 360px;
+          float: left;       
+          margin-left: 20px;
+          margin-right: 20px;
+          background-color: blue;
+       }
+       .right{
+          width: 260px;          
+          float:left;
+         background-color:black;
+       }
+       .navi li{
+        float:left;
+        margin-right:10px;
+       }
+       .clear{
+          clear: both;
+       }
+     </style>
+  </head>
+  <body>
+    <a href="#"><img src="images/ee006be5a9ecb5e3.jpg"></a>
+  	<!-- 导航开始 -->
+    <ul class="navi">
+      <li><a href="#">滚动</a></li>
+      <li><a href="#">排行</a></li>
+      <li><a href="#">政务</a></li>
+      <li><a href="#">暖闻</a></li>
+      <li><a href="#">国内</a></li>
+      <li><a href="#">国际</a></li>
+      <li><a href="#">军事</a></li>
+      <div class="clear"></div>
+    </ul>
+    <!-- 导航结束 -->
+    <!-- 正文开始 -->
+    <div class="wrapper">
+      <div class="left">左</div>
+      <div class="center">中</div>
+      <div class="right">右</div>
+      <div class="clear"></div>
+    </div>
+    <!-- 正文结束 -->
+
+  </body>
+ </html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//全局作用域中创建的变量，全局变量
+	var a = 100;
+	console.log(a);//全局变量任意位置都能访问
+
+	function f1(){//全局作用域中创建的函数
+		var a = 1000;
+		console.log(a);
+		b = 200;
+		console.log(b);
+	}
+	f1();
+	//console.log(b); 无法访问局部变量
+	console.log(b);
+
+
+	function f2(){
+		var a = 1;
+		function f3(){
+			console.log(a);
+			age = 2;
+		}
+		f3();
+	}
+	f2();
+	console.log(age);
+
+	//匿名函数自执行：(函数声明)(实际参数)
+	(function (){
+		//alert("匿名函数自执行");
+	})();
+	//定义变量接收匿名函数
+	var f4 = function (){
+		alert("f4被调用");
+	};
+	f4();
+	console.log(f4);
+
+	//btn.onclick = function (){};
+
+
+	
+	
+  
+  
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

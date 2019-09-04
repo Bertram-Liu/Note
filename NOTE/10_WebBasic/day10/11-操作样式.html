@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	#d1{
+		color:red;
+	}
+	.c1{
+		background:green;
+	}
+  </style>
+ </head>
+ <body>
+	<h1 style="font-size:16px;">一级标题</h1>
+	<script>
+		var h1 = document.getElementsByTagName("h1")[0];
+		h1.id = "d1";
+		h1.className = "c1";
+		console.log(h1.style);//样式表对象
+		h1.style.width = "200px";
+		h1.style.textAlign = "center";
+
+	
+	
+	</script>
+ </body>
+</html>
